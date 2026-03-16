@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqeel Ahmad</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for navbar transparency on scroll -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.backdropFilter = 'blur(5px)';
+            } else {
+                navbar.style.backgroundColor = '#07111C';
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand logoA" href="#">A</a>
+            <a class="navbar-brand logoD" href="#">D</a>
+
+            <!-- Mobile toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero-section">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#design-section">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services-section">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio-section">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                </ul>
+
+                <!-- Download CV Button -->
+                <a href="#" class="btn btn-download-cv">Download CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-content">
+                        <h3 class="hello-text">Hello, It's Me</h3>
+                        <h1 class="name-text">AQEEL AHMAD</h1>
+                        <h2 class="role-text">And I'm a Graphics Designer</h2>
+                        <p class="description-text">Crafting High-Quality Designs That Leave A Lasting Impact With A
+                            Focus On Detail And Creativity.</p>
+
+                        <div class="social-icons">
+                            <button class="btn-hire-me">Hire Me</button>
+
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-image">
+                        <div class="hero-circle"></div>
+                        <img src="Images/heroimg.png" alt="Aqeel Ahmad" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="design-section" class="design-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="design-card">
+                        <div class="design-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>UI/UX DESIGN</h4>
+                        <p>100 Projects</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="design-card">
+                        <div class="design-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>GRAPHICS DESIGN</h4>
+                        <p>80+ Projects</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="design-card">
+                        <div class="design-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>DEVELOPMENT</h4>
+                        <p>20+ Projects</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="design-card">
+                        <div class="design-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>VIDEO EDITING</h4>
+                        <p>30+ Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience-section" class="experience-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-content exp-card-wrapper">
+                        <p class="exp-years">02</p>
+                        <h2 class="exp-title">Years Of Experience</h2>
+                        <p class="exp-description">2 Years Of Experience In Graphic Design And Frontend Development,
+                            Delivering Creative And User-Focused Solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="exp-card">
+                                <p class="exp-number">250+</p>
+                                <p class="exp-text">PROJECTS COMPLETE</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="exp-card">
+                                <p class="exp-number">300+</p>
+                                <p class="exp-text">HAPPY CLIENTS</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="exp-card">
+                                <p class="exp-number">280+</p>
+                                <p class="exp-text">CLIENT REVIEWS</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="exp-card">
+                                <p class="exp-number">300</p>
+                                <p class="exp-text">SATISFIED CLIENTS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-section" class="skills-section">
+        <div class="container skills-container">
+            <div class="text-center mb-5">
+                <h2 class="skills-main-title">My Skills</h2>
+                <p class="skills-main-description">My Skill Set Combines Creativity And Technical Expertise, Enabling Me
+                    To Design Compelling Visuals, Build Responsive Websites, And Deliver User-Focused Digital Solutions
+                    That Enhance Brand Identity And Engagement.</p>
+            </div>
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-lg-5 col-md-12">
+                    <h3 class="skills-category-title">Design Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Adobe Photoshop</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Adobe Illustrator</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Canva</span>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 94%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <h3 class="skills-category-title">Other Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">MS Office</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Video Editing</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education-section" class="education-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="education-main-title">My Education</h2>
+                <p class="education-main-description">Completed Formal Education With A Focus On Building Strong
+                    Technical And Creative Skills In Design, Development, And Digital Content Creation. Always Eager To
+                    Learn And Improve Professional Expertise.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="education-card">
+                        <h3 class="education-title">Matric Science</h3>
+                        <p class="education-date">2020 - 2021</p>
+                        <p class="education-description">Completed Matriculation in Science, gaining foundational
+                            knowledge in Mathematics, Physics, and Computer Science, supporting my technical and design
+                            career path.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="education-card">
+                        <h3 class="education-title">Intermediate (FA-IT)</h3>
+                        <p class="education-date">2022 - 2023</p>
+                        <p class="education-description">Completed Intermediate (FA-IT), gaining foundational knowledge
+                            in information technology, computer applications, and digital systems to support technical
+                            and design skills.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="education-card">
+                        <h3 class="education-title">ADP In Computer Science</h3>
+                        <p class="education-date">2024 - 2025</p>
+                        <p class="education-description">Pursuing ADP in Computer Science, focusing on programming
+                            fundamentals, software development concepts, and modern computing technologies to enhance
+                            technical expertise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="education-card">
+                        <h3 class="education-title">Web Design And Development</h3>
+                        <p class="education-date">8 - Months diploma</p>
+                        <p class="education-description">Skilled in web design and development, creating responsive,
+                            visually appealing websites with clean code, modern layouts, and user-friendly interfaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-section" class="services-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="services-main-title">My Services</h2>
+                <p class="services-main-description">I offer professional graphic design, UI/UX design, frontend
+                    development, video editing, and WordPress development services, delivering high-quality, modern, and
+                    client-focused digital solutions.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="service-title">Graphics Designer</h3>
+                        <p class="service-description">Skilled in graphic design, creating visually impactful branding,
+                            social media content, and marketing materials with a modern and professional touch.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="service-title">UI/UX Designer</h3>
+                        <p class="service-description">I design intuitive, visually engaging user interfaces focused on
+                            usability, seamless interaction, and creating meaningful digital experiences for users.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Development</h3>
+                        <p class="service-description">I build responsive, user-friendly websites using HTML and CSS,
+                            ensuring clean structure, modern design, and smooth cross-browser performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="service-title">Video Editing</h3>
+                        <p class="service-description">I create engaging, high-quality video content with smooth
+                            transitions, precise cuts, and compelling visuals that effectively communicate brand
+                            messages.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h3 class="service-title">Wordpress</h3>
+                        <p class="service-description">I develop and customize WordPress websites, creating responsive,
+                            SEO-friendly, and visually appealing solutions tailored to business needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3 class="service-title">MS Office</h3>
+                        <p class="service-description">Proficient in Microsoft Office, creating professional documents,
+                            presentations, and spreadsheets for efficient communication, reporting, and business
+                            productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-section" class="portfolio-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="portfolio-main-uper-title">Latest Portfolio</h2>
+                <h2 class="portfolio-main-title">Transforming Ideas into Exceptional</h2>
+                <p class="portfolio-main-description">My Latest Portfolio Showcases A Collection of Modern, Creative,
+                    And User-Focused Projects, Highlighting My Expertise in Graphic Design, UI/UX, Frontend Development,
+                    And Responsive Web Solutions.</p>
+            </div>
+
+            <!-- Category Buttons -->
+            <div class="portfolio-categories text-center mb-5">
+                <button class="category-btn active" href="#All">All</button>
+                <button class="category-btn" href="#Graphics">Graphics</button>
+                <button class="category-btn" href="#Ui/UX">Ui/UX</button>
+                <button class="category-btn" href="#Development">Development</button>
+                <button class="category-btn" href="#Video Editing">Video Editing</button>
+                <button class="category-btn" href="#Other Works">Other Works</button>
+            </div>
+
+            <!-- Portfolio Items -->
+            <div class="row portfolio-items">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="UI Design Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">UI DESIGN & DEVELOPMENT</p>
+                                <h4 class="portfolio-title">IT WEBSITE DESIGN</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Graphic Design Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">GRAPHICS DESIGN</p>
+                                <h4 class="portfolio-title">BRANDING PROJECT</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Video Editing Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">VIDEO EDITING</p>
+                                <h4 class="portfolio-title">MOTION GRAPHICS</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="UI Design Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">UI DESIGN & DEVELOPMENT</p>
+                                <h4 class="portfolio-title">IT WEBSITE DESIGN</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Graphic Design Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">GRAPHICS DESIGN</p>
+                                <h4 class="portfolio-title">BRANDING PROJECT</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Video Editing Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">VIDEO EDITING</p>
+                                <h4 class="portfolio-title">MOTION GRAPHICS</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials-section" class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="testimonials-main-title">Testimonial</h2>
+                <p class="testimonials-main-description">Hear What Clients Say About My Creativity, Professionalism,
+                    Timely Delivery, And Commitment To Delivering Impactful, High-Quality Digital Solutions.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-description">A personal portfolio is a curated collection of an
+                            individual's professional work, showcasing their skilA personal portfolio is a curated
+                            collection of an individual's professional work, showcasing their skills,</p>
+                        <h3 class="testimonial-title">Cameron Williamson</h3>
+                        <p class="testimonial-position">Ui/Ux Designer</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-description">A personal portfolio is a curated collection of an
+                            individual's professional work, showcasing their skilA personal portfolio is a curated
+                            collection of an individual's professional work, showcasing their skills,</p>
+                        <h3 class="testimonial-title">Cameron Williamson</h3>
+                        <p class="testimonial-position">Ui/Ux Designer</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-description">A personal portfolio is a curated collection of an
+                            individual's professional work, showcasing their skilA personal portfolio is a curated
+                            collection of an individual's professional work, showcasing their skills,</p>
+                        <h3 class="testimonial-title">Cameron Williamson</h3>
+                        <p class="testimonial-position">Ui/Ux Designer</p>
+                    </div>
+                </div>
+                <div class="testimonial-pagination">
+                    <span class="dot-Testimonial"></span>
+                    <span class="dot-Testimonial"></span>
+                    <span class="dot-Testimonial"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-section" class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="contact-main-title">Contact Us</h2>
+                <p class="contact-main-description">Get In Touch To Discuss Your Project, Ideas, Or Collaborations.
+                    Let’s Create Impactful Digital Solutions Tailored To Your Vision.</p>
+            </div>
+
+            <div class="row">
+                <!-- Left Column - Get In Touch -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact-info">
+                        <h3 class="get-in-touch-title">Get In Touch</h3>
+                        <p class="get-in-touch-description">We're here to help with any questions about Desi Charades.
+                            Reach out to us and we'll respond as soon as possible.</p>
+
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>aqeeldesigners@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <p>+92 328 975 3449</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Lahore Punjab Pakistani</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>24/7 Support</h4>
+                                    <p>support.aqeeldesigners@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Enter your name here" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Enter your Email here" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" class="form-input" placeholder="Enter your Phone number" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-input form-textarea" placeholder="Message" rows="5"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section col-6 col-md-12">
+        <div class="footer-topline"></div>
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-col">
+                <div class="brand-logo">Aqeel <span>Designers</span></div>
+                <div class="brand-role">Creative Studio</div>
+                <p class="brand-desc">Graphic Designer &amp; Web Designer crafting modern, user-focused digital experiences that leave a lasting impression.</p>
+                <div class="socials">
+                    <!-- Facebook -->
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="#" class="social-link" aria-label="TikTok">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.2 8.2 0 0 0 4.84 1.56V6.82a4.85 4.85 0 0 1-1.07-.13z"/></svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <div class="col-heading">Quick Links</div>
+                <ul class="nav-list">
+                    <li><a href="#"><span class="arrow">›</span>Home</a></li>
+                    <li><a href="#"><span class="arrow">›</span>About</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Skills</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Services</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Portfolio</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Testimonial</a></li>
+                </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+                <div class="col-heading">Services</div>
+                <ul class="nav-list">
+                    <li><a href="#"><span class="arrow">›</span>Graphics Designing</a></li>
+                    <li><a href="#"><span class="arrow">›</span>UI/UX Designing</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Development</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Video Editing</a></li>
+                    <li><a href="#"><span class="arrow">›</span>WordPress</a></li>
+                    <li><a href="#"><span class="arrow">›</span>Ms Office</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <div class="col-heading">Get In Touch</div>
+                <div class="contact-item">
+                    <div class="contact-icons">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">aqeeldesigners@gmail.com</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icons">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+92 328 975 3449</div>
+                    </div>
+                </div>
+                <div class="availability">
+                    <span class="dot"></span>
+                    <span class="avail-text">Available for freelance work</span>
+                </div>
+            </div>
+
+        </div><!-- /footer-main -->
+
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
+            <p class="copy"> 2026 <strong>Aqeel Ahmad.</strong> All rights reserved.</p>
+            <p class="footer-tagline">Designed with <span></span> in Pakistan</p>
+        </div>
+
+    </footer>
+
+    <script>
+        // Counter animation for experience numbers
+        function animateCounter(element, target, duration = 2000, suffix = '') {
+            let start = 0;
+            const increment = target / (duration / 10); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + suffix;
+                }
+            }, 16);
+        }
+
+        // Skill percentage animation
+        function animateSkillBar(percentageElement, progressBar, targetPercentage, duration = 2000) {
+            let start = 0;
+            const increment = targetPercentage / (duration / 6); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= targetPercentage) {
+                    percentageElement.textContent = targetPercentage + '%';
+                    progressBar.style.width = targetPercentage + '%';
+                    clearInterval(timer);
+                } else {
+                    percentageElement.textContent = Math.floor(start) + '%';
+                    progressBar.style.width = Math.floor(start) + '%';
+                }
+            }, 16);
+        }
+
+        // Intersection Observer to trigger animation when section is visible
+        const observerOptions = {
+            threshold: 0,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate experience numbers
+                    const numbers = entry.target.querySelectorAll('.exp-number');
+                    numbers.forEach(num => {
+                        const text = num.textContent;
+                        const hasPlus = text.includes('+');
+                        const target = parseInt(text.replace(/\D/g, ''));
+                        const suffix = hasPlus ? '+' : '';
+
+                        // Reset to 0 before animating
+                        num.textContent = '0' + suffix;
+
+                        // Start animation
+                        setTimeout(() => {
+                            animateCounter(num, target, 2000, suffix);
+                        }, 200);
+                    });
+
+                    // Animate skill bars if this is skills section
+                    const skillItems = entry.target.querySelectorAll('.skill-item');
+                    skillItems.forEach((item, index) => {
+                        const percentageElement = item.querySelector('.skill-percentage');
+                        const progressBar = item.querySelector('.progress-fill');
+
+                        if (percentageElement && progressBar) {
+                            const text = percentageElement.textContent;
+                            const targetPercentage = parseInt(text.replace('%', ''));
+
+                            // Reset to 0 before animating
+                            percentageElement.textContent = '10%';
+                            progressBar.style.width = '10%';
+
+                            // Start animation with staggered delay
+                            setTimeout(() => {
+                                animateSkillBar(percentageElement, progressBar, targetPercentage, 2000);
+                            }, 200 + (index * 100)); // Stagger each skill by 100ms
+                        }
+                    });
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing both sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const expSection = document.querySelector('.experience-section');
+            const skillsSection = document.querySelector('.skills-section');
+
+            if (expSection) {
+                observer.observe(expSection);
+            }
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+        });
+
+        // Active navbar link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        function activateNavLink() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', activateNavLink);
+        document.addEventListener('DOMContentLoaded', activateNavLink);
+
+        // Close mobile navbar when scrolling
+        window.addEventListener('scroll', function() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.classList.add('collapsed');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
