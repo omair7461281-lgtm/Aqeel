@@ -117,6 +117,10 @@ h6 {
         background-color: #07111C;
     }
 
+    .navbar {
+        height: 70px;
+    }
+
     .btn-download-cv {
         margin-top: 1rem;
         display: inline-block;
@@ -203,8 +207,8 @@ h6 {
 }
 
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #E6F900;
     border-radius: 50%;
     display: flex;
@@ -374,6 +378,38 @@ h6 {
     margin: 0;
 }
 
+/* Experience
+
+.exp-years {
+    color: #EAF900;
+    font-size: 151px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(234, 249, 0, 0.3);
+    margin-left: -350px;
+    margin-top: 50px;
+
+}
+
+.exp-title {
+    color: #ffffff;
+    font-size: 53px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-left: 250px;
+    margin-top: -142px;
+    max-width: 230px;
+}
+
+.exp-description {
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+    */
+
 .exp-card-wrapper {
     background: linear-gradient(135deg, rgba(7, 17, 28, 0), rgba(242, 255, 32, 0.5));
     border-radius: 20px;
@@ -381,7 +417,7 @@ h6 {
     text-align: center;
     margin-bottom: 20px;
     transition: all 0.3s ease;
-    height: 403px;
+    height: 375px;
     position: relative;
     z-index: 1;
 }
@@ -392,9 +428,9 @@ h6 {
     border-radius: 20px;
     padding: 30px 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: all 0.3s ease;
-    height: 192px;
+    height: 172px;
     position: relative;
     z-index: 1;
 }
@@ -793,7 +829,7 @@ h6 {
 
 .portfolio-card:hover .portfolio-title {
     color: rgb(242, 255, 32);
-;
+    ;
 }
 
 .portfolio-card:hover .portfolio-category {
@@ -895,6 +931,46 @@ h6 {
     line-height: 1.6;
     max-width: 1020px;
     margin: 0 auto 50px;
+}
+
+/* Testimonial Slider with Bootstrap Grid */
+.testimonial-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+.testimonial-slider-container {
+    overflow: hidden;
+}
+
+.testimonial-slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.testimonial-slider-track .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+}
+
+@media (max-width: 768px) {
+    .testimonial-slider-track .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slider-track .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .testimonial-slider-wrapper {
+        padding: 0 40px;
+    }
 }
 
 /* Testimonial Slider */
@@ -1669,8 +1745,25 @@ h6 {
         margin-bottom: -30px;
     }
 
+
     .social-icon {
-        margin-left: 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #E6F900;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #E6F900;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .fa-brands,
+    .fab {
+        font-size: 20px;
     }
 
     .design-section {
@@ -1692,7 +1785,7 @@ h6 {
     .experience-section {
         padding: 20px 0;
     }
-    
+
     .education-card {
         padding: 20px;
     }
@@ -1700,7 +1793,7 @@ h6 {
     .education-title {
         font-size: 20px;
     }
-    
+
     .skills-section {
         padding: 20px 0;
     }
@@ -1708,7 +1801,7 @@ h6 {
     .education-section {
         padding: 20px 0;
     }
-    
+
     .services-section {
         padding: 20px 0;
     }
@@ -1716,7 +1809,7 @@ h6 {
     .testimonials-section {
         padding: 20px 0;
     }
-    
+
 
     .portfolio-main-uper-title {
         font-size: 37px;
@@ -1973,7 +2066,10 @@ h6 {
     }
 
     .btn-hire-me {
-        padding: 12px 30px;
+        padding: 12px 19px;
+        font-size: 16px;
+        width: 110px;
+        height: 40px;
         font-size: 16px;
     }
 }
