@@ -35,6 +35,12 @@ h6 {
 }
 
 /* Logo styling */
+.logo {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
 .logoA {
     font-size: 50px;
     font-weight: bold;
@@ -55,7 +61,6 @@ h6 {
 .navbar>.container {
     display: flex;
     align-items: center;
-
 }
 
 .navbar-nav .nav-link {
@@ -112,29 +117,106 @@ h6 {
 }
 
 /* Mobile responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        margin: 0 0.3rem;
+    }
+    
+    .btn-download-cv {
+        font-size: 18px;
+        padding: 0.4rem 1.2rem;
+        width: 170px;
+        height: 45px;
+    }
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+        padding: 0.5rem 0;
+    }
+    
+    .logo {
+        height: 45px;
+    }
+    
     .navbar-nav {
         margin-top: 1rem;
         background-color: #07111C;
+        padding: 1rem 0;
+        border-radius: 10px;
     }
-
-    .navbar {
-        height: 70px;
+    
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        margin: 0.2rem 0.5rem;
+        text-align: center;
     }
-
+    
     .btn-download-cv {
         margin-top: 1rem;
         display: inline-block;
+        font-size: 16px;
+        padding: 0.4rem 1rem;
+        width: 150px;
+        height: 40px;
+    }
+    
+    .navbar-toggler {
+        border-color: #EAF900;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23EAF900' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        height: 60px;
+        padding: 0.3rem 0;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 14px;
+        margin: 0.1rem 0.3rem;
+    }
+    
+    .btn-download-cv {
+        font-size: 14px;
+        padding: 0.3rem 0.8rem;
+        width: 130px;
+        height: 35px;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
 /* Hero Section */
 .hero-section {
     background: #07111C;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 80px 0 60px;
     display: flex;
     align-items: center;
+    min-height: 100vh;
 }
 
 .hero-content {
@@ -143,7 +225,7 @@ h6 {
 
 .hello-text {
     color: #EAF900;
-    font-size: 48px;
+    font-size: clamp(24px, 4vw, 48px);
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -155,7 +237,7 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 80px;
+    font-size: clamp(40px, 6vw, 80px);
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.1;
@@ -166,14 +248,14 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 40px;
+    font-size: clamp(24px, 4vw, 40px);
     font-weight: 600;
     margin-bottom: 25px;
 }
 
 .description-text {
     color: #cccccc;
-    font-size: 22px;
+    font-size: clamp(16px, 2.5vw, 22px);
     line-height: 1.6;
     margin-bottom: 40px;
     max-width: 600px;
@@ -182,7 +264,7 @@ h6 {
 .btn-hire-me {
     background: linear-gradient(120deg, #F2FF20, #8ABF14);
     color: #000000;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
     font-weight: 600;
     padding: 15px 40px;
     border: none;
@@ -204,27 +286,27 @@ h6 {
 
 .social-icons {
     display: flex;
-
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .social-icon {
-    width: 60px;
-    height: 60px;
+    width: clamp(45px, 5vw, 60px);
+    height: clamp(45px, 5vw, 60px);
     border: 2px solid #E6F900;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #E6F900;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     transition: all 0.3s ease;
     text-decoration: none;
-    margin-left: 15px;
 }
 
 .fa-brands,
 .fab {
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px);
 }
 
 .social-icon:hover {
@@ -243,22 +325,23 @@ h6 {
 
 .hero-circle {
     position: absolute;
-    width: 536.25px;
-    height: 536.25px;
-    margin-top: 142px;
+    width: clamp(300px, 60vw, 536.25px);
+    height: clamp(300px, 60vw, 536.25px);
+    margin-top: clamp(50px, 15vw, 142px);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.04);
     z-index: 0;
 }
 
 .profile-img {
-    width: 487.69px;
-    height: 710.87px;
-    border-radius: 275.29px;
+    width: clamp(250px, 50vw, 487.69px);
+    height: clamp(350px, 80vw, 710.87px);
+    border-radius: clamp(150px, 25vw, 275.29px);
     filter: grayscale(100%);
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
+    object-fit: cover;
 }
 
 .hero-image:hover .hero-circle {
@@ -266,27 +349,106 @@ h6 {
     opacity: 1;
 }
 
-
 .profile-img:hover {
     filter: grayscale(0%);
     transform: scale(1.05);
 }
 
+/* Hero Section Responsive */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 60px 0 40px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0 30px;
+    }
+    
+    .hero-circle {
+        width: 70%;
+        height: 70%;
+        margin-top: 80px;
+    }
+    
+    .profile-img {
+        width: 60%;
+        height: auto;
+        max-height: 500px;
+    }
+    
+    .btn-hire-me {
+        width: auto;
+        min-width: 150px;
+        height: auto;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 30px 0 20px;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
+    }
+    
+    .hero-circle {
+        width: 80%;
+        height: 80%;
+        margin-top: 60px;
+    }
+    
+    .profile-img {
+        width: 70%;
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .btn-hire-me {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 30px;
+    }
+}
+
 /* Design Section */
 .design-section {
     background: #07111C;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: clamp(30px, 5vw, 50px) 0;
 }
 
 .design-card {
     background-color: rgba(255, 255, 255, 0.05);
     border: 2px solid #EAF900;
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 4vw, 30px);
     transition: all 0.3s ease;
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .design-card:hover {
@@ -300,45 +462,44 @@ h6 {
     color: #000000;
 }
 
-
 .design-card:hover .design-icon {
     background-color: #000000;
     color: #EAF900;
 }
 
 .design-icon {
-    width: 60px;
-    height: 60px;
+    width: clamp(50px, 6vw, 60px);
+    height: clamp(50px, 6vw, 60px);
     background-color: #EAF900;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 30px;
+    margin: 0 auto clamp(15px, 3vw, 20px);
+    font-size: clamp(24px, 4vw, 30px);
     color: #000000;
     transition: all 0.3s ease;
 }
 
 .design-card h4 {
     color: #ffffff;
-    font-size: 18px;
+    font-size: clamp(16px, 2.5vw, 18px);
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: clamp(8px, 2vw, 10px);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .design-card p {
     color: #e1e1e1;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     margin: 0;
 }
 
 /* Experience Section */
 .experience-section {
     background: #07111C;
-    padding: 80px 0;
+    padding: clamp(40px, 6vw, 80px) 0;
     position: relative;
 }
 
@@ -352,88 +513,67 @@ h6 {
     opacity: 0.1;
     z-index: 0;
 }
-/* Experience
 
 .exp-years {
     color: #EAF900;
-    font-size: 151px;
+    font-size: clamp(60px, 8vw, 151px);
     font-weight: bold;
     margin: 0;
     line-height: 1;
     text-shadow: 0 0 30px rgba(234, 249, 0, 0.3);
-
+    margin-left: -370px;
+    margin-bottom: -50px;
 }
 
 .exp-title {
     color: #ffffff;
-    font-size: 43px;
-    font-weight: bold;
+    font-size: clamp(24px, 4vw, 40px);
     line-height: 1.2;
-}
-
-.exp-description {
-    color: #cccccc;
-    font-size: 17px;
-    line-height: 1.6;
-    margin: 0;
-}
-    */
-
-
-.exp-years {
-    color: #EAF900;
-    font-size: 151px;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1;
-    text-shadow: 0 0 30px rgba(234, 249, 0, 0.3);
-    margin-left: -350px;
-    margin-top: 50px;
-
-}
-
-.exp-title {
-    color: #ffffff;
-    font-size: 40px;
-    line-height: 1.2;
-    margin-left: 250px;
-    margin-top: -122px;
+    margin-left: clamp(50px, 15vw, 250px);
+    margin-top: clamp(-60px, -10vw, -122px);
     text-align: left;
 }
 
 .exp-description {
     color: #cccccc;
-    font-size: 17px;
+    font-size: clamp(14px, 2.5vw, 17px);
     line-height: 1.6;
-    margin-top: 30px;
+    margin-top: clamp(15px, 3vw, 30px);
     text-align: left;
-    margin-left: 30px;
-
+    margin-left: clamp(10px, 3vw, 30px);
 }
 
 .exp-card-wrapper {
     background: linear-gradient(135deg, rgba(7, 17, 28, 0), rgba(242, 255, 32, 0.5));
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
     text-align: center;
     margin-bottom: 20px;
     transition: all 0.3s ease;
-    height: 375px;
+    height: auto;
+    min-height: 356px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .exp-card {
     background-color: rgba(255, 255, 255, 0.10);
     border: 2px solid #EAF900;
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 4vw, 30px);
     transition: all 0.3s ease;
-    height: 172px;
+    height: auto;
+    min-height: 140px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .exp-card:hover {
@@ -449,15 +589,15 @@ h6 {
 
 .exp-number {
     color: #EAF900;
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 50px);
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0 0 clamp(8px, 2vw, 10px) 0;
     transition: color 0.3s ease;
 }
 
 .exp-text {
     color: #ffffff;
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 20px);
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
@@ -465,12 +605,73 @@ h6 {
     transition: color 0.3s ease;
 }
 
+/* Experience Section Responsive */
+@media (max-width: 768px) {
+    .exp-years {
+        margin-left: -210px;
+        font-size: 105px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .exp-title {
+        margin-left: 140px;
+        font-size: 35px;
+        margin-top: -95px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    .exp-description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+    }
+    
+    .exp-card-wrapper {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .exp-years {
+        font-size: 80px;
+        margin-top: 30px;
+    }
+    
+    .exp-title {
+        font-size: 28px;
+        margin-top: -70px;
+    }
+    
+    .exp-description {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    
+    .exp-card {
+        min-height: 120px;
+        padding: 15px;
+    }
+    
+    .exp-number {
+        font-size: 24px;
+    }
+    
+    .exp-text {
+        font-size: 12px;
+    }
+}
 
 /* Skills Section */
 .skills-section {
     background: #07111C;
-    padding-top: 0px;
-    padding-bottom: 80px;
+    padding: clamp(20px, 3vw, 40px) 0 clamp(40px, 6vw, 80px);
 }
 
 .skills-main-title {
@@ -478,16 +679,16 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 50px);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 3vw, 20px);
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
 .skills-main-description {
     color: #cccccc;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     line-height: 1.6;
     max-width: 1050px;
     margin: 0 auto;
@@ -495,27 +696,27 @@ h6 {
 
 .skills-category-title {
     color: #EAF900;
-    font-size: 30px;
+    font-size: clamp(24px, 4vw, 30px);
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 4vw, 30px);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .skill-item {
-    margin-bottom: 25px;
+    margin-bottom: clamp(15px, 3vw, 25px);
 }
 
 .skill-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: clamp(8px, 2vw, 10px);
 }
 
 .skill-name {
     color: #ffffff;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -523,14 +724,13 @@ h6 {
 
 .skill-percentage {
     color: #EAF900;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: bold;
 }
 
-
 .progress-bar {
     background-color: rgba(255, 255, 255, 0.1);
-    height: 15px;
+    height: clamp(10px, 2vw, 15px);
     border-radius: 65px;
     overflow: hidden;
     position: relative;
@@ -558,7 +758,7 @@ h6 {
 .skills-container {
     background: linear-gradient(135deg, rgba(234, 249, 0, 0.1), transparent);
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
     margin-bottom: 20px;
     transition: all 0.3s ease;
     height: auto;
@@ -566,22 +766,30 @@ h6 {
     z-index: 1;
 }
 
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
+/* Skills Section Responsive */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 20px 15px;
     }
-
-    100% {
-        transform: translateX(100%);
+    
+    .skills-category-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .skill-name {
+        font-size: 14px;
+    }
+    
+    .skill-percentage {
+        font-size: 14px;
     }
 }
 
 /* Education Section */
 .education-section {
     background: #07111C;
-    padding-top: 0;
-    padding-bottom: 80px;
+    padding: clamp(20px, 3vw, 40px) 0 clamp(40px, 6vw, 80px);
 }
 
 .education-main-title {
@@ -589,29 +797,29 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 50px);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 3vw, 20px);
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
 .education-main-description {
     color: #ffffff;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     line-height: 1.6;
     max-width: 1140px;
-    margin: 0 auto 50px;
+    margin: 0 auto clamp(30px, 5vw, 50px);
 }
 
 .education-card {
     background-color: rgba(255, 255, 255, 0.10);
     border: 2px solid #EAF900;
     border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: clamp(20px, 4vw, 30px);
+    margin-bottom: clamp(15px, 3vw, 20px);
     transition: all 0.3s ease;
-
+    height: auto;
 }
 
 .education-card:hover {
@@ -628,7 +836,7 @@ h6 {
 
 .education-title {
     color: #EAF900;
-    font-size: 25px;
+    font-size: clamp(20px, 3vw, 25px);
     font-weight: bold;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -637,24 +845,75 @@ h6 {
 
 .education-date {
     color: #ffffff;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
 }
 
 .education-description {
     color: #ffffff;
-    font-size: 19px;
+    font-size: clamp(15px, 2.5vw, 19px);
     line-height: 1.6;
     margin: 0;
-    max-width: 530px;
+    max-width: 100%;
+}
+
+/* Education Section Responsive */
+@media (max-width: 768px) {
+    .education-main-title {
+        font-size: 35px;
+    }
+
+    .education-main-description {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .education-title {
+        font-size: 20px;
+    }
+    
+    .education-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .education-main-title {
+        font-size: 28px;
+    }
+    
+    .education-main-description {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .education-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .education-title {
+        font-size: 18px;
+    }
+    
+    .education-date {
+        font-size: 14px;
+    }
+    
+    .education-description {
+        font-size: 13px;
+    }
 }
 
 /* Services Section */
 .services-section {
     background: #07111C;
-    padding-top: 0px;
-    padding-bottom: 80px;
+    padding: clamp(20px, 3vw, 40px) 0 clamp(40px, 6vw, 80px);
 }
 
 .services-main-title {
@@ -662,30 +921,31 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 50px);
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: clamp(30px, 5vw, 50px);
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
 .services-main-description {
     color: #ffffff;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     line-height: 1.6;
     max-width: 1100px;
-    margin: 0 auto 50px;
+    margin: 0 auto clamp(30px, 5vw, 50px);
 }
 
 .service-card {
     background-color: rgba(255, 255, 255, 0.10);
     border: 2px solid #EAF900;
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: clamp(25px, 4vw, 40px) clamp(20px, 3vw, 30px);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 4vw, 30px);
     transition: all 0.3s ease;
-    height: 336px;
+    height: auto;
+    min-height: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -709,36 +969,89 @@ h6 {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
     background-color: #EAF900;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 25px;
-    font-size: 35px;
+    margin: 0 auto clamp(15px, 3vw, 25px);
+    font-size: clamp(28px, 4vw, 35px);
     color: #000000;
     transition: all 0.3s ease;
 }
 
 .service-title {
     color: #ffffff;
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .service-description {
     color: #cccccc;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     line-height: 1.6;
     margin: 0;
     transition: color 0.3s ease;
 }
 
+/* Services Section Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        min-height: 250px;
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .service-title {
+        font-size: 18px;
+    }
+    
+    .service-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-main-title {
+        font-size: 45px;
+    }
+    
+    .services-main-description {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .service-card {
+        min-height: 220px;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .service-title {
+        font-size: 16px;
+    }
+    
+    .service-description {
+        font-size: 13px;
+    }
+}
 
 /* Portfolio Section */
 .portfolio-section {
@@ -963,14 +1276,14 @@ h6 {
     }
 
     .exp-years {
-    margin-left: -210px;
+    margin-left: 0px;
     font-size: 105px;
     }
 
 .exp-title {
     margin-left: 140px;
     font-size: 35px;
-    margin-top: -95px;
+    margin-top: -45px;
     
 }
 
@@ -1986,7 +2299,7 @@ h6 {
     }
 
     .portfolio-main-title {
-        font-size: 31px;
+        font-size: 28px;
     }
 
     .portfolio-image img {
@@ -2005,6 +2318,9 @@ h6 {
 
     .portfolio-card {
         height: 350px;
+    }
+    .testimonials-main-title {
+        font-size: 45px;
     }
 }
 
