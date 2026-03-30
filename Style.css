@@ -105,9 +105,10 @@ h6 {
 }
 
 .btn-download-cv:hover {
+    background: black;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-    color: #000 !important;
+    color: #F2FF20 !important;
 }
 
 /* Mobile responsiveness */
@@ -242,20 +243,18 @@ h6 {
 
 .hero-circle {
     position: absolute;
-    width: 532px;
-    height: 532px;
+    width: 536.25px;
+    height: 536.25px;
     margin-top: 142px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.04);
     z-index: 0;
 }
 
-
-
 .profile-img {
-    width: 447px;
-    height: 672px;
-    border-radius: 200px;
+    width: 487.69px;
+    height: 710.87px;
+    border-radius: 275.29px;
     filter: grayscale(100%);
     transition: all 0.3s ease;
     position: relative;
@@ -353,6 +352,7 @@ h6 {
     opacity: 0.1;
     z-index: 0;
 }
+/* Experience
 
 .exp-years {
     color: #EAF900;
@@ -377,8 +377,8 @@ h6 {
     line-height: 1.6;
     margin: 0;
 }
+    */
 
-/* Experience
 
 .exp-years {
     color: #EAF900;
@@ -394,21 +394,22 @@ h6 {
 
 .exp-title {
     color: #ffffff;
-    font-size: 53px;
-    font-weight: bold;
+    font-size: 40px;
     line-height: 1.2;
     margin-left: 250px;
-    margin-top: -142px;
-    max-width: 230px;
+    margin-top: -122px;
+    text-align: left;
 }
 
 .exp-description {
     color: #cccccc;
     font-size: 17px;
     line-height: 1.6;
-    margin-top: 10px;
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 30px;
+
 }
-    */
 
 .exp-card-wrapper {
     background: linear-gradient(135deg, rgba(7, 17, 28, 0), rgba(242, 255, 32, 0.5));
@@ -960,6 +961,19 @@ h6 {
         flex: 0 0 auto;
         width: 50%;
     }
+
+    .exp-years {
+    margin-left: -210px;
+    font-size: 105px;
+    }
+
+.exp-title {
+    margin-left: 170px;
+    font-size: 40px;
+    margin-top: -105px;
+    
+}
+
 }
 
 @media (max-width: 576px) {
@@ -1717,9 +1731,9 @@ h6 {
     }
 
     .hero-circle {
-        width: 80%;
+        width: 70%;
         height: 80%;
-        margin-top: 74px;
+        margin-top: 72px;
     }
 
     .profile-img {
