@@ -504,7 +504,7 @@ h6 {
         grid-template-columns: 1fr 1fr;
         gap: 0px;
     }
-    
+
     .design-section .col-lg-3 {
         grid-column: span 1;
     }
@@ -516,28 +516,28 @@ h6 {
         grid-template-columns: 1fr 1fr;
         gap: 0px;
     }
-    
+
     .design-section .col-lg-3 {
         grid-column: span 1;
     }
-    
+
     .design-card {
         min-height: 140px;
         padding: 15px 10px;
     }
-    
+
     .design-icon {
         width: 40px;
         height: 40px;
         font-size: 20px;
         margin-bottom: 10px;
     }
-    
+
     .design-card h4 {
         font-size: 14px;
         margin-bottom: 5px;
     }
-    
+
     .design-card p {
         font-size: 12px;
     }
@@ -1176,7 +1176,7 @@ h6 {
     position: relative;
 }
 
-.portfolio-items > div {
+.portfolio-items>div {
     transition: all 0.3s ease;
     opacity: 1;
     transform: scale(1);
@@ -1521,27 +1521,27 @@ h6 {
     .testimonial-slider-container {
         padding: 0 40px;
     }
-    
+
     .testimonial-card {
         padding: 30px 20px;
     }
-    
+
     .testimonial-icon {
         font-size: 60px;
     }
-    
+
     .testimonial-description {
         font-size: 18px;
     }
-    
+
     .testimonial-title {
         font-size: 16px;
     }
-    
+
     .testimonial-position {
         font-size: 16px;
     }
-    
+
     .testimonial-nav {
         width: 40px;
         height: 40px;
@@ -1553,34 +1553,34 @@ h6 {
     .testimonial-slider-container {
         padding: 0 30px;
     }
-    
+
     .testimonial-card {
         padding: 5px 15px;
     }
-    
+
     .testimonial-icon {
         font-size: 50px;
         margin-bottom: 15px;
     }
-    
+
     .testimonial-description {
         font-size: 16px;
     }
-    
+
     .testimonial-title {
         font-size: 14px;
     }
-    
+
     .testimonial-position {
         font-size: 14px;
     }
-    
+
     .testimonial-nav {
         width: 35px;
         height: 35px;
         font-size: 14px;
     }
-    
+
     .dot-Testimonial {
         width: 20px;
         height: 20px;
@@ -2103,6 +2103,432 @@ h6 {
 .footer-tagline span {
     color: var(--footer-lime);
 }
+
+/* NewStart Portfolio Section Responsive Design */
+:root {
+    --bg: #080808;
+    --surface: #0f0f0f;
+    --accent: #c8f135;
+    --accent-glow: rgba(200, 241, 53, .18);
+    --text: #f0f0f0;
+    --muted: #444;
+    --subtle: #777;
+    --border: rgba(255, 255, 255, 0.07);
+    --r: 16px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 72px 28px 100px;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ─── HEADER ─────────────────────────────── */
+.hd {
+    text-align: center;
+    margin-bottom: 52px;
+    animation: up .7s ease both;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+.eyebrow i {
+    display: block;
+    width: 26px;
+    height: 1px;
+    background: var(--accent);
+    opacity: .4;
+}
+
+.hd-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(40px, 5.5vw, 66px);
+    font-weight: 800;
+    line-height: 1.03;
+    letter-spacing: -.04em;
+    margin-bottom: 16px;
+}
+
+.hd-title em {
+    color: var(--accent);
+    font-style: normal;
+}
+
+.hd-sub {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--subtle);
+    max-width: 430px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ─── FILTERS ────────────────────────────── */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+    animation: up .65s .08s ease both;
+}
+
+.fb {
+    padding: 9px 32px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--subtle);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .22s ease;
+    letter-spacing: .01em;
+}
+
+.fb:hover {
+    border-color: rgba(200, 241, 53, .3);
+    color: #EAF900;
+}
+
+.fb.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #080808;
+    font-weight: 600;
+}
+
+/* ─── GRID ───────────────────────────────── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ─── CARD ───────────────────────────────── */
+.card {
+    position: relative;
+    border-radius: var(--r);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    background: var(--surface);
+    transition:
+        transform .44s cubic-bezier(.22, 1, .36, 1),
+        border-color .3s,
+        box-shadow .44s;
+    animation: up .55s ease both;
+}
+
+.card:nth-child(1) {
+    animation-delay: .06s
+}
+
+.card:nth-child(2) {
+    animation-delay: .12s
+}
+
+.card:nth-child(3) {
+    animation-delay: .18s
+}
+
+.card:nth-child(4) {
+    animation-delay: .24s
+}
+
+.card:nth-child(5) {
+    animation-delay: .30s
+}
+
+.card:nth-child(6) {
+    animation-delay: .36s
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(200, 241, 53, .3);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, .65), 0 0 0 1px rgba(200, 241, 53, .12);
+}
+
+/* shimmer placeholder */
+.shimmer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #111 25%, #1c1c1c 50%, #111 75%);
+    background-size: 200% 100%;
+    animation: shim 1.4s infinite;
+    transition: opacity .4s;
+}
+
+.shimmer.done {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes shim {
+    0% {
+        background-position: 200% 0
+    }
+
+    100% {
+        background-position: -200% 0
+    }
+}
+
+/* image */
+.card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .5s ease, transform .65s cubic-bezier(.22, 1, .36, 1), filter .4s;
+    filter: brightness(.78) saturate(.85);
+}
+
+.card-img.loaded {
+    opacity: 1;
+}
+
+.card:hover .card-img {
+    transform: scale(1.09);
+    filter: brightness(.45) saturate(.6);
+}
+
+/* gradient */
+.card-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: linear-gradient(165deg, transparent 25%, rgba(0, 0, 0, .5) 60%, rgba(0, 0, 0, .96) 100%);
+    pointer-events: none;
+}
+
+/* number */
+.card-num {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    z-index: 5;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(8, 8, 8, .7);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--subtle);
+    opacity: 0;
+    transform: translateY(-4px) scale(.9);
+    transition: opacity .28s, transform .28s;
+}
+
+.card:hover .card-num {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.card:hover .card-cat,
+.card:hover .card-name {
+    color: #EAF900;
+}
+/* bottom bar */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 16px 16px 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-cat {
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 4px;
+    opacity: .9;
+}
+
+.card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -.01em;
+}
+
+/* arrow btn */
+.card-btn {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s cubic-bezier(.22, 1, .36, 1), background .2s;
+    box-shadow: 0 4px 16px rgba(200, 241, 53, .25);
+}
+
+.card:hover .card-btn {
+    transform: rotate(-12deg) scale(1.12);
+    background: #d6ff38;
+}
+
+.card-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke: #080808;
+    fill: none;
+    stroke-width: 2.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ─── VIEW ALL ───────────────────────────── */
+.cta {
+    text-align: center;
+    margin-top: 56px;
+    animation: up .7s .42s ease both;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 34px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--subtle);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .28s ease;
+}
+
+.cta-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.cta-btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform .28s;
+}
+
+.cta-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* ─── FILTER ANIM ────────────────────────── */
+.card.hiding {
+    animation: cardOut .18s ease both;
+}
+
+.card.showing {
+    animation: up .4s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes cardOut {
+    to {
+        opacity: 0;
+        transform: translateY(6px) scale(.97)
+    }
+}
+
+/* ─── RESPONSIVE ─────────────────────────── */
+@media(max-width:760px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media(max-width:480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fb {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+/* NewEnd Portfolio Section Responsive Design */
+
 
 
 /* Portfolio Section Responsive Design */
