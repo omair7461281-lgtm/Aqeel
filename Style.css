@@ -25,7 +25,7 @@ h6 {
 /* Dark theme navigation bar */
 .navbar {
     background-color: #07111C;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     padding: 1rem 0;
     border-bottom: 1px solid #333;
     height: 90px;
@@ -127,12 +127,12 @@ h6 {
     .container {
         max-width: 960px;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 18px;
         margin: 0 0.3rem;
     }
-    
+
     .btn-download-cv {
         font-size: 18px;
         padding: 0.4rem 1.2rem;
@@ -146,24 +146,24 @@ h6 {
         height: 70px;
         padding: 0.5rem 0;
     }
-    
+
     .logo {
         height: 45px;
     }
-    
+
     .navbar-nav {
         margin-top: 1rem;
         background-color: #07111C;
         padding: 1rem 0;
         border-radius: 10px;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 16px;
         margin: 0.2rem 0.5rem;
         text-align: center;
     }
-    
+
     .btn-download-cv {
         margin-top: 1rem;
         display: inline-block;
@@ -172,11 +172,11 @@ h6 {
         width: 150px;
         height: 40px;
     }
-    
+
     .navbar-toggler {
         border-color: #EAF900;
     }
-    
+
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23EAF900' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
@@ -187,23 +187,23 @@ h6 {
         height: 60px;
         padding: 0.3rem 0;
     }
-    
+
     .logo {
         height: 40px;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 14px;
         margin: 0.1rem 0.3rem;
     }
-    
+
     .btn-download-cv {
-        font-size: 14px;
+        font-size: 20px;
         padding: 0.3rem 0.8rem;
-        width: 130px;
-        height: 35px;
+        width: 360px;
+        height: 40px;
     }
-    
+
     .container {
         padding-left: 15px;
         padding-right: 15px;
@@ -213,7 +213,7 @@ h6 {
 /* Hero Section */
 .hero-section {
     background: #07111C;
-    padding: 80px 0 60px;
+    padding: 10px 0 60px;
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -224,12 +224,12 @@ h6 {
 }
 
 .hello-text {
-    color: #EAF900;
     font-size: clamp(24px, 4vw, 48px);
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-top: 30px;
 }
 
 .name-text {
@@ -244,10 +244,6 @@ h6 {
 }
 
 .role-text {
-    background: linear-gradient(45deg, #FFFFFF, #EAF900);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     font-size: clamp(24px, 4vw, 40px);
     font-weight: 600;
     margin-bottom: 25px;
@@ -262,9 +258,9 @@ h6 {
 }
 
 .btn-hire-me {
-    background: linear-gradient(120deg, #F2FF20, #8ABF14);
+    background: #F2FF20;
     color: #000000;
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: 20px;
     font-weight: 600;
     padding: 15px 40px;
     border: none;
@@ -276,6 +272,12 @@ h6 {
     margin-bottom: 40px;
     width: 197px;
     height: 58px;
+    --bs-link-color-rgb: 0, 0, 0;
+}
+
+.btn-hire-me a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .btn-hire-me:hover {
@@ -337,7 +339,6 @@ h6 {
     width: clamp(250px, 50vw, 487.69px);
     height: clamp(350px, 80vw, 710.87px);
     border-radius: clamp(150px, 25vw, 275.29px);
-    filter: grayscale(100%);
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
@@ -360,12 +361,12 @@ h6 {
         padding: 60px 0 40px;
         min-height: auto;
     }
-    
+
     .hero-content {
         text-align: center;
         margin-bottom: 40px;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
@@ -375,22 +376,22 @@ h6 {
     .hero-section {
         padding: 40px 0 30px;
     }
-    
+
     .hero-circle {
         width: 70%;
         height: 70%;
         margin-top: 80px;
     }
-    
+
     .profile-img {
         width: 60%;
         height: auto;
         max-height: 500px;
     }
-    
+
     .btn-hire-me {
         width: auto;
-        min-width: 150px;
+        min-width: 330px;
         height: auto;
         padding: 12px 30px;
     }
@@ -400,33 +401,33 @@ h6 {
     .hero-section {
         padding: 30px 0 20px;
     }
-    
+
     .hero-content {
         padding: 0 15px;
     }
-    
+
     .hero-circle {
         width: 80%;
         height: 80%;
         margin-top: 60px;
     }
-    
+
     .profile-img {
         width: 70%;
         height: auto;
         max-height: 400px;
     }
-    
+
     .social-icons {
         justify-content: center;
         gap: 10px;
         margin-bottom: 20px;
     }
-    
+
     .btn-hire-me {
         width: 100%;
         max-width: 200px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 }
 
@@ -496,6 +497,52 @@ h6 {
     margin: 0;
 }
 
+/* Design Section Responsive */
+@media (max-width: 768px) {
+    .design-section .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+    }
+    
+    .design-section .col-lg-3 {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .design-section .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+    }
+    
+    .design-section .col-lg-3 {
+        grid-column: span 1;
+    }
+    
+    .design-card {
+        min-height: 140px;
+        padding: 15px 10px;
+    }
+    
+    .design-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .design-card h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .design-card p {
+        font-size: 12px;
+    }
+}
+
 /* Experience Section */
 .experience-section {
     background: #07111C;
@@ -530,7 +577,7 @@ h6 {
     font-size: clamp(24px, 4vw, 40px);
     line-height: 1.2;
     margin-left: clamp(50px, 15vw, 250px);
-    margin-top: clamp(-60px, -10vw, -122px);
+    margin-top: clamp(-63px, -10vw, -122px);
     text-align: left;
 }
 
@@ -625,14 +672,14 @@ h6 {
         margin-right: auto;
         display: block;
     }
-    
+
     .exp-description {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         padding: 0 20px;
     }
-    
+
     .exp-card-wrapper {
         min-height: 250px;
     }
@@ -643,26 +690,26 @@ h6 {
         font-size: 80px;
         margin-top: 30px;
     }
-    
+
     .exp-title {
         font-size: 28px;
         margin-top: -70px;
     }
-    
+
     .exp-description {
         font-size: 14px;
         margin-top: 20px;
     }
-    
+
     .exp-card {
-        min-height: 120px;
+        min-height: 140px;
         padding: 15px;
     }
-    
+
     .exp-number {
         font-size: 24px;
     }
-    
+
     .exp-text {
         font-size: 12px;
     }
@@ -760,7 +807,7 @@ h6 {
     border-radius: 20px;
     padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
     margin-bottom: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.93s ease;
     height: auto;
     position: relative;
     z-index: 1;
@@ -771,16 +818,16 @@ h6 {
     .skills-container {
         padding: 20px 15px;
     }
-    
+
     .skills-category-title {
         text-align: center;
         margin-bottom: 20px;
     }
-    
+
     .skill-name {
         font-size: 14px;
     }
-    
+
     .skill-percentage {
         font-size: 14px;
     }
@@ -876,7 +923,7 @@ h6 {
     .education-title {
         font-size: 20px;
     }
-    
+
     .education-description {
         font-size: 14px;
     }
@@ -886,25 +933,25 @@ h6 {
     .education-main-title {
         font-size: 28px;
     }
-    
+
     .education-main-description {
         font-size: 14px;
         padding: 0 15px;
     }
-    
+
     .education-card {
         padding: 15px;
         margin-bottom: 15px;
     }
-    
+
     .education-title {
         font-size: 18px;
     }
-    
+
     .education-date {
         font-size: 14px;
     }
-    
+
     .education-description {
         font-size: 13px;
     }
@@ -1005,17 +1052,17 @@ h6 {
         min-height: 250px;
         padding: 25px 20px;
     }
-    
+
     .service-icon {
         width: 60px;
         height: 60px;
         font-size: 28px;
     }
-    
+
     .service-title {
         font-size: 18px;
     }
-    
+
     .service-description {
         font-size: 14px;
     }
@@ -1025,29 +1072,29 @@ h6 {
     .services-main-title {
         font-size: 45px;
     }
-    
+
     .services-main-description {
         font-size: 14px;
         padding: 0 15px;
     }
-    
+
     .service-card {
         min-height: 220px;
         padding: 20px 15px;
         margin-bottom: 20px;
     }
-    
+
     .service-icon {
         width: 50px;
         height: 50px;
         font-size: 24px;
         margin-bottom: 15px;
     }
-    
+
     .service-title {
         font-size: 16px;
     }
-    
+
     .service-description {
         font-size: 13px;
     }
@@ -1126,9 +1173,13 @@ h6 {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 492px;
-    width: 413px;
     position: relative;
+}
+
+.portfolio-items > div {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .portfolio-card:hover {
@@ -1276,16 +1327,16 @@ h6 {
     }
 
     .exp-years {
-    margin-left: 0px;
-    font-size: 105px;
+        margin-left: 0px;
+        font-size: 105px;
     }
 
-.exp-title {
-    margin-left: 140px;
-    font-size: 35px;
-    margin-top: -45px;
-    
-}
+    .exp-title {
+        margin-left: 140px;
+        font-size: 35px;
+        margin-top: -45px;
+
+    }
 
 }
 
@@ -1304,7 +1355,7 @@ h6 {
 .testimonial-slider-container {
     position: relative;
     overflow: hidden;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 60px;
 }
@@ -1316,14 +1367,14 @@ h6 {
 
 .testimonial-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .testimonial-slide {
     min-width: 100%;
     opacity: 0;
     transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
+    transition: all 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     justify-content: center;
 }
@@ -1345,8 +1396,8 @@ h6 {
     text-align: center;
     margin-bottom: 30px;
     transition: all 0.3s ease;
-    height: auto;
-    max-width: 600px;
+    height: 450px;
+    max-width: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1443,7 +1494,7 @@ h6 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .dot-Testimonial {
@@ -1453,12 +1504,88 @@ h6 {
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
 }
 
 .dot-Testimonial.active,
 .dot-Testimonial:hover {
     background-color: #EAF900;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(234, 249, 0, 0.5);
+}
+
+/* Responsive Testimonial Slider */
+@media (max-width: 768px) {
+    .testimonial-slider-container {
+        padding: 0 40px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+    
+    .testimonial-icon {
+        font-size: 60px;
+    }
+    
+    .testimonial-description {
+        font-size: 18px;
+    }
+    
+    .testimonial-title {
+        font-size: 16px;
+    }
+    
+    .testimonial-position {
+        font-size: 16px;
+    }
+    
+    .testimonial-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slider-container {
+        padding: 0 30px;
+    }
+    
+    .testimonial-card {
+        padding: 5px 15px;
+    }
+    
+    .testimonial-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-description {
+        font-size: 16px;
+    }
+    
+    .testimonial-title {
+        font-size: 14px;
+    }
+    
+    .testimonial-position {
+        font-size: 14px;
+    }
+    
+    .testimonial-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .dot-Testimonial {
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
 }
 
 /* Contact Us Section */
@@ -1983,7 +2110,7 @@ h6 {
     .portfolio-image {
         height: 450px;
     }
-    
+
     .portfolio-card {
         height: 422px;
         width: 100%;
@@ -1994,7 +2121,7 @@ h6 {
     .portfolio-image {
         height: 400px;
     }
-    
+
     .portfolio-card {
         height: 372px;
         width: 100%;
@@ -2005,24 +2132,24 @@ h6 {
     .portfolio-image {
         height: 350px;
     }
-    
+
     .portfolio-card {
         height: 322px;
         width: 100%;
     }
-    
+
     .portfolio-main-title {
         font-size: 32px;
     }
-    
+
     .portfolio-main-uper-title {
         font-size: 24px;
     }
-    
+
     .portfolio-main-description {
         font-size: 18px;
     }
-    
+
     .category-btn {
         font-size: 14px;
         padding: 12px 24px;
@@ -2033,42 +2160,42 @@ h6 {
     .portfolio-image {
         height: 280px;
     }
-    
+
     .portfolio-card {
         height: 252px;
         width: 100%;
     }
-    
+
     .portfolio-main-title {
         font-size: 28px;
     }
-    
+
     .portfolio-main-uper-title {
         font-size: 20px;
     }
-    
+
     .portfolio-main-description {
         font-size: 16px;
     }
-    
+
     .category-btn {
         font-size: 12px;
         padding: 10px 20px;
         margin: 5px;
     }
-    
+
     .portfolio-categories {
         gap: 10px;
     }
-    
+
     .portfolio-title {
         font-size: 24px;
     }
-    
+
     .portfolio-category {
         font-size: 14px;
     }
-    
+
     .portfolio-icon {
         width: 35px;
         height: 35px;
@@ -2080,36 +2207,36 @@ h6 {
     .portfolio-image {
         height: 240px;
     }
-    
+
     .portfolio-card {
         height: 212px;
         width: 100%;
     }
-    
+
     .portfolio-main-title {
         font-size: 24px;
     }
-    
+
     .portfolio-main-uper-title {
         font-size: 18px;
     }
-    
+
     .portfolio-title {
         font-size: 20px;
     }
-    
+
     .portfolio-category {
         font-size: 12px;
     }
-    
+
     .portfolio-icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         font-size: 12px;
         top: 8px;
         left: 15px;
     }
-    
+
     .portfolio-content {
         padding: 15px;
     }
@@ -2119,16 +2246,16 @@ h6 {
     .portfolio-image {
         height: 200px;
     }
-    
+
     .portfolio-card {
         height: 172px;
         width: 100%;
     }
-    
+
     .portfolio-title {
         font-size: 18px;
     }
-    
+
     .portfolio-category {
         font-size: 11px;
     }
@@ -2230,9 +2357,9 @@ h6 {
 
 
     .social-icon {
-        width: 40px;
-        height: 40px;
-        border: 2px solid #E6F900;
+        width: 52px;
+        height: 52px;
+        border: 4px solid #E6F900;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -2241,12 +2368,12 @@ h6 {
         font-size: 18px;
         transition: all 0.3s ease;
         text-decoration: none;
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     .fa-brands,
     .fab {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .design-section {
@@ -2255,6 +2382,8 @@ h6 {
 
     .design-card {
         margin-bottom: 20px;
+        max-width: 170px;
+
     }
 
     .education-main-title {
@@ -2303,8 +2432,8 @@ h6 {
     }
 
     .portfolio-image img {
-        width:
-        height:
+        width: 100%;
+        height: 100%;
     }
 
     .portfolio-main-description {
@@ -2312,13 +2441,14 @@ h6 {
     }
 
     .category-btn {
-        font-size: 14px;
+        font-size: 13px;
         padding: 10px 20px;
     }
 
     .portfolio-card {
         height: 350px;
     }
+
     .testimonials-main-title {
         font-size: 45px;
     }
@@ -2552,10 +2682,10 @@ h6 {
     }
 
     .btn-hire-me {
-        padding: 12px 19px;
+        padding: 0px 19px;
         font-size: 16px;
         width: 110px;
-        height: 40px;
-        font-size: 16px;
+        height: 50px;
+        font-size: 25px;
     }
 }

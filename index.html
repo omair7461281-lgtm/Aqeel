@@ -25,6 +25,46 @@
                 navbar.style.backgroundColor = '#07111C';
             }
         });
+
+        // Testimonial Slider JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.dot-Testimonial');
+            let currentSlide = 0;
+            let autoPlayInterval;
+
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                // Show current slide
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+
+                // Reset auto-play timer
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }, 8000);
+            }
+
+            // Add click event to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+
+            // Start auto-play
+            startAutoPlay();
+        });
     </script>
 
 </head>
@@ -66,14 +106,14 @@
                 <!-- Left Content -->
                 <div class="col-lg-6 col-md-12">
                     <div class="hero-content">
-                        <h3 class="hello-text">Hello, It's Me</h3>
+                        <h3 class="hello-text"><span style="color: white;">Hello,</span> <span style="color: #EAF900;">It's Me</span></h3>
                         <h1 class="name-text">AQEEL AHMAD</h1>
-                        <h2 class="role-text">And I'm a Graphics Designer</h2>
+                        <h2 class="role-text"><span style="color: white;">And I'm a</span> <span style="color: #EAF900;">Graphics Designer</span></h2>
                         <p class="description-text">Crafting High-Quality Designs That Leave A Lasting Impact With A
                             Focus On Detail And Creativity.</p>
 
                         <div class="social-icons">
-                            <button class="btn-hire-me">Hire Me</button>
+                            <button class="btn-hire-me"><a href="#contact-section">Hire Me</a></button>
 
                             <a href="https://www.facebook.com/" class="social-icon">
                                 <i class="fab fa-facebook-f"></i>
@@ -429,28 +469,13 @@
                 <button class="category-btn" href="#Ui/UX">Ui/UX</button>
                 <button class="category-btn" href="#Development">Development</button>
                 <button class="category-btn" href="#Video Editing">Video Editing</button>
-                <button class="category-btn" href="#Other Works">Other Works</button>
+                <button class="category-btn" href="#Visual">Visual</button>
+                <button class="category-btn" href="#Photography">Photography</button>
             </div>
 
             <!-- Portfolio Items -->
             <div class="row portfolio-items">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="Images/Portfolio.png" alt="UI Design Project">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <p class="portfolio-category">UI DESIGN & DEVELOPMENT</p>
-                                <h4 class="portfolio-title">IT WEBSITE DESIGN</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Graphics">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="Images/Portfolio.png" alt="Graphic Design Project">
@@ -461,28 +486,27 @@
                             </div>
                             <div class="portfolio-text">
                                 <p class="portfolio-category">GRAPHICS DESIGN</p>
-                                <h4 class="portfolio-title">BRANDING PROJECT</h4>
+                                <h4 class="portfolio-title">Graphic Design</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Ui/UX">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
-                            <img src="Images/Portfolio.png" alt="Video Editing Project">
+                            <img src="Images/Portfolio.png" alt="UI Design Project">
                         </div>
                         <div class="portfolio-content">
-                            <div class="portfolio-icon">
-                                <i class="fas fa-video"></i>
+                            <div class="portfolio-icon"> <i class="fas fa-laptop-code"></i>
                             </div>
                             <div class="portfolio-text">
-                                <p class="portfolio-category">VIDEO EDITING</p>
-                                <h4 class="portfolio-title">MOTION GRAPHICS</h4>
+                                <p class="portfolio-category">UI/UX DESIGN</p>
+                                <h4 class="portfolio-title">UI/UX Design</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Development">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="Images/Portfolio.png" alt="UI Design Project">
@@ -492,29 +516,13 @@
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <div class="portfolio-text">
-                                <p class="portfolio-category">UI DESIGN & DEVELOPMENT</p>
-                                <h4 class="portfolio-title">IT WEBSITE DESIGN</h4>
+                                <p class="portfolio-category">DEVELOPMENT</p>
+                                <h4 class="portfolio-title">Development</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="Images/Portfolio.png" alt="Graphic Design Project">
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="portfolio-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <div class="portfolio-text">
-                                <p class="portfolio-category">GRAPHICS DESIGN</p>
-                                <h4 class="portfolio-title">BRANDING PROJECT</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Video Editing">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="Images/Portfolio.png" alt="Video Editing Project">
@@ -525,7 +533,39 @@
                             </div>
                             <div class="portfolio-text">
                                 <p class="portfolio-category">VIDEO EDITING</p>
-                                <h4 class="portfolio-title">MOTION GRAPHICS</h4>
+                                <h4 class="portfolio-title">Video Editing</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Visual">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Graphic Design Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">Visual</p>
+                                <h4 class="portfolio-title">Visual</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-category="Photography">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="Images/Portfolio.png" alt="Video Editing Project">
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="portfolio-text">
+                                <p class="portfolio-category">Photography</p>
+                                <h4 class="portfolio-title">Photography</h4>
                             </div>
                         </div>
                     </div>
@@ -542,47 +582,121 @@
                 <p class="testimonials-main-description">Hear What Clients Say About My Creativity, Professionalism,
                     Timely Delivery, And Commitment To Delivering Impactful, High-Quality Digital Solutions.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-icon">
-                            <i class="fas fa-quote-left"></i>
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-wrapper">
+                        <!-- Slide 1: 3 Testimonials -->
+                        <div class="testimonial-slide active">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">A personal portfolio is a curated collection of an
+                                            individual's professional work, showcasing their skills and expertise through carefully selected projects and achievements.</p>
+                                        <h3 class="testimonial-title">Cameron Williamson</h3>
+                                        <p class="testimonial-position">Ui/Ux Designer</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Aqeel's design work exceeded our expectations. His attention to detail and creative approach brought our vision to life in ways we never imagined.</p>
+                                        <h3 class="testimonial-title">Sarah Johnson</h3>
+                                        <p class="testimonial-position">Project Manager</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Working with Aqeel was a game-changer for our brand. His innovative designs and professional approach helped us stand out in market.</p>
+                                        <h3 class="testimonial-title">Michael Chen</h3>
+                                        <p class="testimonial-position">CEO TechStart</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="testimonial-description">A personal portfolio is a curated collection of an
-                            individual's professional work, showcasing their skilA personal portfolio is a curated
-                            collection of an individual's professional work, showcasing their skills,</p>
-                        <h3 class="testimonial-title">Cameron Williamson</h3>
-                        <p class="testimonial-position">Ui/Ux Designer</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-icon">
-                            <i class="fas fa-quote-left"></i>
+                        <!-- Slide 2: 3 Testimonials -->
+                        <div class="testimonial-slide">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Exceptional creativity and technical skill combined. Aqeel delivered a stunning website that perfectly captures our brand essence.</p>
+                                        <h3 class="testimonial-title">Emily Rodriguez</h3>
+                                        <p class="testimonial-position">Marketing Director</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Aqeel's UI/UX expertise transformed our user experience. Our customer satisfaction has increased significantly since the redesign.</p>
+                                        <h3 class="testimonial-title">David Kim</h3>
+                                        <p class="testimonial-position">Product Owner</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Professional, creative, and reliable. Aqeel delivered outstanding work on time and exceeded all our expectations.</p>
+                                        <h3 class="testimonial-title">Lisa Anderson</h3>
+                                        <p class="testimonial-position">Creative Director</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="testimonial-description">A personal portfolio is a curated collection of an
-                            individual's professional work, showcasing their skilA personal portfolio is a curated
-                            collection of an individual's professional work, showcasing their skills,</p>
-                        <h3 class="testimonial-title">Cameron Williamson</h3>
-                        <p class="testimonial-position">Ui/Ux Designer</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-icon">
-                            <i class="fas fa-quote-left"></i>
+                        <!-- Slide 3: 3 Testimonials -->
+                        <div class="testimonial-slide">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Exceptional creativity and technical skill combined. Aqeel delivered a stunning website that perfectly captures our brand essence.</p>
+                                        <h3 class="testimonial-title">Emily Rodriguez</h3>
+                                        <p class="testimonial-position">Marketing Director</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Aqeel's UI/UX expertise transformed our user experience. Our customer satisfaction has increased significantly since the redesign.</p>
+                                        <h3 class="testimonial-title">David Kim</h3>
+                                        <p class="testimonial-position">Product Owner</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-icon">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
+                                        <p class="testimonial-description">Professional, creative, and reliable. Aqeel delivered outstanding work on time and exceeded all our expectations.</p>
+                                        <h3 class="testimonial-title">Lisa Anderson</h3>
+                                        <p class="testimonial-position">Creative Director</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="testimonial-description">A personal portfolio is a curated collection of an
-                            individual's professional work, showcasing their skilA personal portfolio is a curated
-                            collection of an individual's professional work, showcasing their skills,</p>
-                        <h3 class="testimonial-title">Cameron Williamson</h3>
-                        <p class="testimonial-position">Ui/Ux Designer</p>
                     </div>
                 </div>
                 <div class="testimonial-pagination">
-                    <span class="dot-Testimonial"></span>
-                    <span class="dot-Testimonial"></span>
-                    <span class="dot-Testimonial"></span>
+                    <span class="dot-Testimonial active" data-slide="0"></span>
+                    <span class="dot-Testimonial" data-slide="1"></span>
+                    <span class="dot-Testimonial" data-slide="2"></span>
                 </div>
             </div>
         </div>
@@ -838,8 +952,8 @@
 
         // Intersection Observer to trigger animation when section is visible
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px'
+            threshold: 0.5,
+            rootMargin: '100px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -937,6 +1051,175 @@
                 navbarToggler.classList.add('collapsed');
                 navbarToggler.setAttribute('aria-expanded', 'false');
             }
+        });
+
+        // Testimonial Slider Functionality
+        class TestimonialSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.testimonial-slide');
+                this.dots = document.querySelectorAll('.dot-Testimonial');
+                this.prevBtn = document.querySelector('.testimonial-prev');
+                this.nextBtn = document.querySelector('.testimonial-next');
+                this.wrapper = document.querySelector('.testimonial-wrapper');
+                
+                this.init();
+            }
+
+            init() {
+                if (this.slides.length === 0) return;
+
+                // Add event listeners
+                this.prevBtn?.addEventListener('click', () => this.prevSlide());
+                this.nextBtn?.addEventListener('click', () => this.nextSlide());
+                
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Auto-play functionality
+                this.startAutoPlay();
+
+                // Pause on hover
+                const sliderContainer = document.querySelector('.testimonial-slider-container');
+                sliderContainer?.addEventListener('mouseenter', () => this.stopAutoPlay());
+                sliderContainer?.addEventListener('mouseleave', () => this.startAutoPlay());
+
+                // Touch/swipe support
+                this.initTouchSupport();
+            }
+
+            updateSlider() {
+                // Update slides
+                this.slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev');
+                    if (index === this.currentSlide) {
+                        slide.classList.add('active');
+                    } else if (index === this.getPrevIndex()) {
+                        slide.classList.add('prev');
+                    }
+                });
+
+                // Update dots
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+
+                // Update wrapper transform
+                if (this.wrapper) {
+                    this.wrapper.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                }
+            }
+
+            nextSlide() {
+                this.currentSlide = this.getNextIndex();
+                this.updateSlider();
+            }
+
+            prevSlide() {
+                this.currentSlide = this.getPrevIndex();
+                this.updateSlider();
+            }
+
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlider();
+            }
+
+            getNextIndex() {
+                return (this.currentSlide + 1) % this.slides.length;
+            }
+
+            getPrevIndex() {
+                return (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+            }
+
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => this.nextSlide(), 5000);
+            }
+
+            stopAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                }
+            }
+
+            initTouchSupport() {
+                let startX = 0;
+                let endX = 0;
+                const slider = document.querySelector('.testimonial-slider');
+
+                if (!slider) return;
+
+                slider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                slider.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    this.handleSwipe();
+                });
+
+                this.handleSwipe = () => {
+                    const swipeThreshold = 50;
+                    const diff = startX - endX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            this.nextSlide(); // Swipe left, go to next
+                        } else {
+                            this.prevSlide(); // Swipe right, go to prev
+                        }
+                    }
+                };
+            }
+        }
+
+        // Initialize testimonial slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new TestimonialSlider();
+        });
+
+        // Portfolio Category Filter
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-items > div');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const selectedCategory = button.getAttribute('href').replace('#', '');
+
+                    portfolioItems.forEach(item => {
+                        if (selectedCategory === 'All') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            const itemCategory = item.getAttribute('data-category');
+                            if (itemCategory === selectedCategory) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
         });
 
     </script>
